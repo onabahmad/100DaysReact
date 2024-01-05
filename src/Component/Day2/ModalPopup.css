@@ -1,0 +1,96 @@
+.modal_page {
+  background-color: rgb(101, 109, 74);
+  width: 100%;
+  max-height: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.modal_page_background {
+  background-color: rgb(44, 48, 33);
+  /* opacity: ; */
+  width: 100%;
+  max-height: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.DontShow {
+  display: none;
+}
+
+.Popup_container {
+  padding: 20px;
+  background-color: #ffffff;
+  margin: 2rem;
+
+  font-weight: 500;
+  width: 50;
+  height: 100%;
+  overflow: auto;
+  border-radius: 20px;
+  z-index: 1;
+  animation: slide ease 0.4s;
+}
+
+.Popup_container p {
+  text-align: center;
+}
+.Popup_container div {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.Popup_container button {
+  background-color: #ffffff;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+@keyframes slide {
+  from {
+    transform: translateY(-30rem);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.modal_Create {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+}
+.modal_Create h1 {
+  font-weight: 300;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+.modal_Create h4 {
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+}
+.modal_Create button {
+  margin-top: 2rem;
+  padding: 10px 20px 10px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 2px solid black;
+}
+.modal_Create button:hover {
+  background-color: #d3d3d3;
+}
