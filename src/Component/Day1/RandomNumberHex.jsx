@@ -6,10 +6,6 @@ const RandomNumberHex = () => {
   const [number, setnumber] = useState(0);
   const Navigate = useNavigate();
   const handleAdd = () => {
-    // let Number;
-    // let add = number + 1;
-    // setnumber(add);
-
     setnumber((oldnumber) => oldnumber + 1);
   };
   const handleSubstract = () => {
@@ -19,8 +15,6 @@ const RandomNumberHex = () => {
     setnumber(0);
   };
   const handleRandom = () => {
-    // let random;
-    // let Generate = Math.floor(Math.random(random) * 100);
     setnumber(() => Math.floor(Math.random() * 100));
   };
 
@@ -53,7 +47,9 @@ const RandomNumberHex = () => {
           </div>
         </div>
         <div className="nextbutton_container">
-          <button className="NextButton dontdisplay">Back</button>
+          <button onclic className="NextButton dontdisplay">
+            Back
+          </button>
           <button className="NextButton" onClick={handleNavigate}>
             Next
           </button>

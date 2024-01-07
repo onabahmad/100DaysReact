@@ -17,6 +17,7 @@
   background-color: beige;
   justify-content: center;
   border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 .button_container {
   padding-top: 40px;
@@ -42,11 +43,13 @@
 }
 
 .NextButton {
-  padding: 20px;
+  padding: 20px !important;
   border-radius: 10px;
-  background-color: #000000;
+  background-color: #000000 !important;
   color: #ffffff;
-  margin: 20% 10% 0 10%;
+  margin: 0% 10% 0 10%;
+  position: relative;
+  top: 60px;
   border: none;
   cursor: pointer;
 }

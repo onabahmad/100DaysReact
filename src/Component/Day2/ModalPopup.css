@@ -27,9 +27,9 @@
 
 .Popup_container {
   padding: 20px;
-  background-color: #ffffff;
+  background-color: rgba(225, 225, 225, 0.3);
+  backdrop-filter: blur(10px);
   margin: 2rem;
-
   font-weight: 500;
   width: 50;
   height: 100%;
@@ -42,6 +42,7 @@
 .Popup_container p {
   text-align: center;
 }
+
 .Popup_container div {
   display: flex;
   align-items: center;
@@ -50,7 +51,7 @@
 }
 
 .Popup_container button {
-  background-color: #ffffff;
+  background: none;
   border: none;
   font-size: 20px;
   cursor: pointer;

@@ -1,0 +1,61 @@
+.palidrome_checker {
+  background-color: #e07a5f;
+}
+.palidrome_checker input {
+  border: none;
+  padding: 10px 20px 10px 20px;
+  border-radius: 5px;
+  box-shadow: inset -10px -10px 15px rgba(255, 255, 255, 0.5),
+    inset 10px 10px 15px rgba(70, 70, 70, 0.12);
+  color: #585858;
+}
+
+.palidrome_checker button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #81b29a;
+  color: #ffffff;
+  cursor: pointer;
+}
+.palidrome_checker button:hover {
+  background-color: #649b81;
+}
+
+.palidrome_checker_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 2rem 2rem 5rem 2rem;
+
+  background-color: #f4f1de;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+.palidrome_checker_container h2 {
+  margin-bottom: 2rem;
+  padding: 0;
+  font-weight: 400;
+  color: #81b29a;
+}
+.palidrome_checker_input_button {
+  display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.Palidrome {
+  color: #81b29a;
+  font-weight: 600;
+}
+.notPalidrome {
+  color: #e07a5f;
+  font-weight: 600;
+}

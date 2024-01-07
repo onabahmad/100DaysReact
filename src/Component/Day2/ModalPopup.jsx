@@ -24,7 +24,7 @@ const ModalPopup = () => {
     <div className={modalPage ? "modal_page" : "modal_page_background"}>
       <div className={show ? "Popup_container" : "DontShow"}>
         <div>
-          <h4>Modal</h4>
+          <h3>Modal</h3>
           <button className="" onClick={RemoveModal}>
             X
           </button>
