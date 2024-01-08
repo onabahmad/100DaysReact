@@ -7,13 +7,19 @@ const PalindromeChecker = () => {
   const [completeword, setcompleteword] = useState("");
   const [reverse, setReverse] = useState("");
   const [checkPalindrome, setCheckPalindrome] = useState();
+  const [vowel, Setvowel] = useState(0);
   const [showMessage, setShowMessage] = useState(false);
-
   const Navigate = useNavigate();
+
   const handleChange = (e) => {
     setWord(e.target.value);
   };
   console.log(word);
+
+  const handleFunctions = () => {
+    handleReverse();
+    handleVowelCount();
+  };
   const handleReverse = () => {
     if (word === "") {
       alert("Write a Word ");
@@ -34,6 +40,20 @@ const PalindromeChecker = () => {
     console.log(compareWords);
   }, [reverse]);
 
+  const handleVowelCount = () => {
+    let splitword = word.toLowerCase().split(""); // Convert to lowercase for case-insensitive comparison
+    const vowelArray = ["a", "e", "i", "o", "u"];
+    let vowelCount = 0;
+
+    splitword.forEach((element) => {
+      if (vowelArray.includes(element)) {
+        vowelCount++;
+      }
+    });
+    Setvowel(vowelCount);
+    console.log(vowelCount);
+  };
+
   const handleNavigate = () => {
     Navigate("/Day4");
   };
@@ -44,7 +64,7 @@ const PalindromeChecker = () => {
   return (
     <div className="main_container palidrome_checker">
       <div className="palidrome_checker_container">
-        <h2>Palindrome Checker</h2>
+        <h2>Palindrome Checker & Vowels Counter</h2>
         <div className="palidrome_checker_input_button">
           <input
             placeholder="Write a word"
@@ -52,7 +72,7 @@ const PalindromeChecker = () => {
             value={word}
             onChange={handleChange}
           />
-          <button onClick={handleReverse}>
+          <button onClick={handleFunctions}>
             <IoSearchOutline />
           </button>
         </div>
@@ -60,9 +80,9 @@ const PalindromeChecker = () => {
         {showMessage && (
           <div>
             {checkPalindrome === 0 ? (
-              <p className="Palidrome">{`${completeword} is a Palindrome`}</p>
+              <p className="Palidrome">{`${completeword} is a Palindrome and have ${vowel} vowels`}</p>
             ) : (
-              <p className="notPalidrome">{`${completeword} is not a Palindrome`}</p>
+              <p className="notPalidrome">{`${completeword} is not a Palindrome  and have ${vowel} vowels`}</p>
             )}
           </div>
         )}
