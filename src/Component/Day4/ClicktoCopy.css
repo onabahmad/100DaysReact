@@ -1,0 +1,51 @@
+.click_copy {
+  background-color: #9c6644;
+}
+
+.click_copy_container {
+  background-color: #b08968;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.click_copy_container h2 {
+  font-weight: 300;
+  font-size: 25px;
+  margin-top: 0px;
+  padding: 0px;
+}
+.clickCopy_inputbutton {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+}
+
+.clickCopy_inputbutton input {
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.click_copy_buttonCopy,
+.click_copy_buttonCopied {
+  background-color: #7f5539;
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.click_copy_buttonCopied {
+  background-color: #4c2811;
+}
+
+@media only screen and (max-width: 600px) {
+  .click_copy_container {
+    border-radius: 0px;
+  }
+}
