@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import "./ClicktoCopy.css";
+import { useNavigate } from "react-router-dom";
 
 const ClicktoCopy = () => {
   const [textInput, setTextInput] = useState("ZinoTrust123");
-
+  const Navigate = useNavigate();
   const handleInput = (e) => {
     setTextInput(e.target.value);
   };
@@ -23,6 +24,12 @@ const ClicktoCopy = () => {
       .catch((error) => {
         console.log("Error copying text", error);
       });
+  };
+  const handleNavigate = () => {
+    Navigate("/Day5");
+  };
+  const handleNavigateback = () => {
+    Navigate("/Day3");
   };
 
   console.log(textInput);
@@ -47,6 +54,14 @@ const ClicktoCopy = () => {
             Copied!!
           </button>
         </div>
+      </div>
+      <div className="nextbutton_container">
+        <button className="NextButton" onClick={handleNavigateback}>
+          Back
+        </button>
+        <button className="NextButton" onClick={handleNavigate}>
+          Next
+        </button>
       </div>
     </div>
   );
